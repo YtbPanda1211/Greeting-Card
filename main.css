@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+:root {
+    --main-color: #e69c9f;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.mainPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.letter {
+    position: relative;
+    height: 90%;
+    width: 800px;
+    transform: translateX(-25%);
+    transition: .5;
+}
+
+.left {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    transition: .5s;
+    padding: 20px;
+}
+
+.leftFront {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cc7723;
+    border-radius: inherit;
+}
+
+.musicShowcase {
+    height: 30%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #FFFAF0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 5px 5px 5px gray;
+}
+
+.musicShowcase > img {
+    height: 60%;
+    animation: animateHeadPhone 1s ease-in-out infinite alternate;
+}
+
+@keyframes animateHeadPhone {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.musicContent {
+    height: fit-content;
+    width: 80%;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.nameMusic {
+    font-size: 30px;
+}
+
+.nameMusic .fa-compact-disc {
+    font-size: 36px;
+    animation: discEffect 1s ease-in-out infinite alternate;
+}
+
+.sign {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.processTrack {
+    position: relative;
+    height: 14px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: inset 5px 5px 2px lightgray;
+}
+
+.buttonProcess {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.processTimer {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    transform: translateY(110%);
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+}
+
+.lengthProcessTimer {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    transform: translateY(110%);
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+}
+
+.musicControl {
+    height: fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 40px !important;
+    display: flex;
+}
+
+.musicControl .btnControl {
+    height: 20px;
+    width: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 30px;
+    border: none;
+    box-shadow: inset 5px 5px 5px gray;
+    transition: .5s;
+}
+
+.musicControl .btnControl:hover {
+    cursor: grab;
+    box-shadow: unset;
+}
+
+.musicControl .btnControl > i {
+    filter: drop-shadow(5px 5px 5px gray);
+}
+
+.startBtn {
+    margin: 0 50px;
+}
+
+.leftBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-image: linear-gradient(to right, #CD853F, #cc7723);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    border-right: 10px solid #be660d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letterContent {
+    height: 90%;
+    width: 90%;
+    font-size: 26px;
+    line-height: 1.5;
+    overflow: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: inherit;
+    font-family: 'Markazi Text', serif;
+}
+
+.letterContent::-webkit-scrollbar {
+    background-color: whitesmoke;
+    width: 10px;
+}
+
+.letterContent::-webkit-scrollbar-thumb {
+    background-color: #CD853F;
+    border-radius: 10px;
+}
+
+.right {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(to left, #CD853F, #cc7723);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 10px solid #be660d;
+}
+
+.mainRight {
+    height: 90%;
+    width: 90%;
+    background-color: #222222 !important;
+    border-radius: inherit;
+}
+
+.allbum {
+    position: relative;
+    height: 200px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.detailAllbum {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: inherit;
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Markazi Text', serif;
+    overflow: auto;
+}
+
+.detailAllbum::-webkit-scrollbar {
+    background-color: whitesmoke;
+    width: 10px;
+}
+
+.detailAllbum::-webkit-scrollbar-thumb {
+    background-color: #CD853F;
+    border-radius: 10px;
+}
+
+.lidAllbum {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.lidAllbum > img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: rotateY(180deg) translateX(50%);
+    border-radius: inherit;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 5px gray, -5px -5px 5px white;
+}
+
+.outSideAllbum {
+    height: 100%;
+    width: 100%;
+    background-color: #CD853F;
+    border-radius: inherit;
+    backface-visibility: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 90%, 10% 80%, 10% 20%, 0 10%);
+    background-image: url("https://static-00.iconduck.com/assets.00/black-heart-emoji-2048x1802-sccsi239.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+}
+
+/* Letter Active */
+.letter.active {
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.letter.active .left{
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+    transform-origin: left;
+    background-color: red;
+    transition: .5s;
+}
+
+.letter.active .leftFront {
+    backface-visibility: hidden;
+}
+
+.letter.active .allbum.active .lidAllbum {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg) translateX(-10px);
+    transform-origin: right;
+    transition: cubic-bezier(0.55, 0.055, 0.675, 0.19)s;
+    transition: 1s;
+}
+
+/* KEYFRAMES */
+@keyframes discEffect {
+    to {
+        transform: rotate(180deg);
+    }
+}
